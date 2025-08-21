@@ -43,18 +43,20 @@ export default function Section({ title, apiEndpoint, isCarousel = false }) {
               key={album.id}
               image={album.image}
               name={album.title}
-              follows={album.likes}
+              title={album.title}   // ✅ Title prop bhi diya
+              follows={album.follows}
             />
           )}
         />
       ) : (
         <Grid container spacing={2}>
           {displayedAlbums.map((album) => (
-            <Grid key={album.id} size={{ xs: 6, sm: 4, md: 2 }}>
+            <Grid key={album.id} item xs={6} sm={4} md={2}>
               <AlbumCard
                 image={album.image}
                 name={album.title}
-                follows={album.likes}
+                title={album.title}   // ✅ Yehi chahiye test ke liye
+                follows={album.follows}
               />
             </Grid>
           ))}

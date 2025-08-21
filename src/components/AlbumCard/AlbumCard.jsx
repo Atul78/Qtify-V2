@@ -1,5 +1,12 @@
 import React from "react";
-import { Card, CardContent, CardMedia, Typography, Chip, Box } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+  Chip,
+  Box,
+} from "@mui/material";
 
 export default function AlbumCard({ image, name, follows }) {
   return (
@@ -11,6 +18,7 @@ export default function AlbumCard({ image, name, follows }) {
         boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
         backgroundColor: "#121212",
         color: "#fff",
+        fontFamily: "Poppins, sans-serif", // 👈 consistent font
       }}
     >
       {/* Album Image */}
@@ -30,19 +38,27 @@ export default function AlbumCard({ image, name, follows }) {
             position: "absolute",
             bottom: 8,
             left: 8,
-            backgroundColor: "#fff",
-            color: "#000",
-            fontWeight: "bold",
-            fontSize: "0.75rem",
+            backgroundColor: "#34C94B", // 👈 green theme
+            color: "#fff",
+            fontWeight: 500,
+            fontSize: "0.7rem",
+            borderRadius: "6px",
+            height: "24px",
           }}
         />
       </Box>
 
       {/* Bottom Section */}
-      <CardContent sx={{ textAlign: "center", padding: "0.5rem" }}>
+      <CardContent sx={{ textAlign: "center", p: "0.5rem" }}>
         <Typography
           variant="subtitle1"
-          sx={{ fontWeight: "bold", fontSize: "1rem" }}
+          sx={{
+            fontWeight: 600,
+            fontSize: "0.95rem",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis", // 👈 text overflow handle
+          }}
         >
           {name}
         </Typography>
