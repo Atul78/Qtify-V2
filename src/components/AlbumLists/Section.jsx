@@ -15,7 +15,7 @@ export default function Section({ title, apiEndpoint, isCarousel = false }) {
       .catch((err) => console.error(err));
   }, [apiEndpoint]);
 
-  const displayedAlbums = expanded ? albums : albums.slice(0, 6);
+  const displayedAlbums = expanded ? albums : albums.slice(0, 8);
 
   return (
     <Box sx={{ padding: "2rem", backgroundColor: "#000", color: "#fff" }}>

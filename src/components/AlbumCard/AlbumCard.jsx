@@ -12,13 +12,13 @@ export default function AlbumCard({ image, name, follows }) {
   return (
     <Card
       sx={{
-        width: "100%",
+        width: 170,
         borderRadius: "12px",
         overflow: "hidden",
         boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
         backgroundColor: "#121212",
         color: "#fff",
-        fontFamily: "Poppins, sans-serif", // 👈 consistent font
+        fontFamily: "Poppins, sans-serif",
       }}
     >
       {/* Album Image */}
