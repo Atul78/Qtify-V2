@@ -58,6 +58,7 @@ const Navbar = () => {
             borderRadius: "20px",
             textTransform: "none",
             fontWeight: "bold",
+            fontFamily: "Poppins, sans-serif",
             px: 3,
             "&:hover": {
               backgroundColor: "#000000",

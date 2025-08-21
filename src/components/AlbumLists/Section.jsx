@@ -40,9 +40,10 @@ export default function Section({ title, apiEndpoint, isCarousel = false }) {
           items={albums}
           renderItem={(album) => (
             <AlbumCard
+              key={album.id}
               image={album.image}
               name={album.title}
-              follows={album.follows}
+              follows={album.likes}
             />
           )}
         />
@@ -53,7 +54,7 @@ export default function Section({ title, apiEndpoint, isCarousel = false }) {
               <AlbumCard
                 image={album.image}
                 name={album.title}
-                follows={album.follows}
+                follows={album.likes}
               />
             </Grid>
           ))}
