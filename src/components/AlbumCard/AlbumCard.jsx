@@ -8,11 +8,11 @@ import {
   Box,
 } from "@mui/material";
 
-export default function AlbumCard({ image, name, follows }) {
+export default function AlbumCard({ image, name, follows, likes }) {
   return (
     <Card
       sx={{
-        width: 170,
+        width: 200,
         borderRadius: "12px",
         overflow: "hidden",
         boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
@@ -32,13 +32,13 @@ export default function AlbumCard({ image, name, follows }) {
         />
         {/* Chip for follows */}
         <Chip
-          label={`${follows} Follows`}
+          label={follows ? `${follows} Follows` : `${likes} 👍 Likes`}
           size="small"
           sx={{
             position: "absolute",
             bottom: 8,
             left: 8,
-            backgroundColor: "#34C94B", // 👈 green theme
+            backgroundColor: follows ? "#34C94B" : "#F44336",
             color: "#fff",
             fontWeight: 500,
             fontSize: "0.7rem",

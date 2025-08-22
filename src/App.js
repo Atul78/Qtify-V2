@@ -22,6 +22,12 @@ function App() {
         apiEndpoint="https://qtify-backend-labs.crio.do/albums/new"
         isCarousel={true}
       />
+      <Section
+        title="Songs"
+        apiEndpoint="https://qtify-backend-labs.crio.do/songs"
+        tabAPIEndpoint="https://qtify-backend-labs.crio.do/genres"
+        isCarousel={true}
+      />
     </>
   );
 }
